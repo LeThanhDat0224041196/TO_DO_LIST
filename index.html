@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List App</title>
+    <title>ToDo List App</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,10 +13,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap"
         rel="stylesheet">
 
-    <lin rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
+    <main class="app">
+
+        <section class="greeing">
+            <h2 class="title">
+                What's up <input type="text" placeholder="Name here" id="name">
+            </h2>
+        </section>
+
+        <section class="create-todo">
+            <h3>CREATE TO DO</h3>
+            <form action="" id="new-todo-form">
+                <h4>What's on your todo list</h4>
+                <input type="text" name="content" id="content" placeholder="e.g make a video">
+
+                <h4>Pick a category</h4>
+                <div class="option">
+                    <label>
+                        <input type="radio" name="category" id="categoty_1" value="business">
+                        <span class=" bubble bubble_business"></span>
+                        <div>Business</div>
+                    </label>
+                    <label>
+                        <input type="radio" name="category" id="categoty_2" value="personal">
+                        <span class="bubble bubble_personal"></span>
+                        <div>Personal</div>
+                    </label>
+                </div>
+                <input type="submit" value="Add todo">
+            </form>
+        </section>
+
+        <section class="todo-list">
+            <h3>TODO LIST</h3>
+            <div class="list" id="todo-list">
+                <div class="todo-item done">
+                    <label>
+                        <input type="checkbox" />
+                        <span class=" bubble bubble_business"></span>
+                    </label>
+
+                    <div class="todo-content">
+                        <input type="text" value="Make a video" readonly>
+                    </div>
+
+                    <div class="action">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+
+                <div class="todo-item">
+                    <label>
+                        <input type="checkbox" />
+                        <span class=" bubble bubble_personal"></span>
+                    </label>
+
+                    <div class="todo-content">
+                        <input type="text" value="Get milk" readonly>
+                    </div>
+
+                    <div class="action">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
     <script src="main.js"></script>
 </body>
 
